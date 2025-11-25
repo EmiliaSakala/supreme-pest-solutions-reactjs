@@ -1,0 +1,137 @@
+/* Top contact bar */
+.topbar {
+  background: #001f54;
+  color: white;
+  display: flex;
+   width: 100%;
+  height: 40px;
+}
+
+.left{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.topbar .left .itemContainer{
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                margin-left: 30px;
+}
+
+
+.topbar .left .itemContainer a{
+                    text-decoration: none;
+                    color: #fff;
+                    font-size: 15px;
+}
+
+.topbar .left .itemContainer span{
+      font-size: 15px;
+    }
+
+
+/* Main nav */
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 15px 20px;
+  background: white;
+  position: sticky;
+  top: 0;
+  z-index: 999;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.nav-logo img {
+  height: 50px;
+}
+
+.nav-links {
+  display: flex;
+  gap: 25px;
+  list-style: none;
+}
+
+.nav-links li a {
+  text-decoration: none;
+  font-size: 16px;
+  color: #333;
+  font-weight: 600;
+}
+
+.nav-links li a:hover {
+  color: #ff4d4d;
+}
+
+/* Dropdown */
+.dropdown-menu {
+  display: none;
+  position: absolute;
+  background: white;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  padding: 10px 0;
+}
+
+.dropdown:hover .dropdown-menu {
+  display: block;
+}
+
+.dropdown-menu li {
+  padding: 8px 20px;
+}
+
+.nav-socials{
+  padding-right: 30px;
+}
+
+/* Social icons */
+.nav-socials svg {
+  margin-left: 12px;
+  font-size: 18px;
+  color: #ff4d4d;
+  cursor: pointer;
+}
+
+.nav-socials svg:hover {
+  opacity: 0.7;
+}
+
+/* Mobile menu icon */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+}
+
+.hamburger span {
+  height: 3px;
+  width: 25px;
+  background: #000;
+  margin-bottom: 4px;
+}
+
+/* Responsive */
+@media screen and (max-width: 768px) {
+  .nav-links {
+    position: absolute;
+    top: 70px;
+    left: -100%;
+    flex-direction: column;
+    background: white;
+    width: 100%;
+    padding: 20px;
+    transition: 0.3s;
+  }
+
+  .nav-links.active {
+    left: 0;
+  }
+
+  .hamburger {
+    display: flex;
+  }
+}
