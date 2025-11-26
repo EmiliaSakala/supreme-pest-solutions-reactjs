@@ -1,0 +1,96 @@
+.spec-section {
+  padding: 80px 40px;
+  background: #ffffff;
+  text-align: center;
+}
+
+.spec-title {
+  font-size: 42px;
+  color: #0a1a3a;
+  font-weight: 800;
+  margin-bottom: 40px;
+}
+
+/* Grid Layout */
+.spec-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+  max-width: 1300px;
+  margin: auto;
+}
+
+/* Cards */
+.spec-card {
+  background: #fff;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: rgba(0,0,0,0.08) 0px 6px 18px;
+  transition: transform 0.3s ease;
+}
+
+.spec-card:hover {
+  transform: translateY(-5px);
+}
+
+.spec-img {
+  width: 100%;
+  height: 260px;
+  object-fit: cover;
+}
+
+/* Info section */
+.spec-info {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  padding: 18px 25px;
+  background: #f5f7fa;
+  border-top: 6px solid #ff7f00;
+}
+
+.spec-icon {
+  background: #ff7f00;
+  color: #fff;
+  padding: 10px;
+  border-radius: 6px;
+  font-size: 20px;
+  display: flex;
+  align-items: center;
+}
+
+.spec-info h3 {
+  font-size: 20px;
+  color: #0a1a3a;
+  font-weight: 700;
+  text-align: left;
+}
+
+/* Responsive */
+@media (max-width: 992px) {
+  .spec-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .spec-img {
+    height: 220px;
+  }
+}
+
+@media (max-width: 600px) {
+  .spec-section {
+    padding: 50px 20px;
+  }
+
+  .spec-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .spec-img {
+    height: 200px;
+  }
+
+  .spec-title {
+    font-size: 32px;
+  }
+}

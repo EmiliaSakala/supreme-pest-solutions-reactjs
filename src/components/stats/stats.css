@@ -1,0 +1,10 @@
+.facts {
+    display: flex;flex-direction: row;
+    background-image: url("./carousel-1.jpg");
+    background-position: center;
+}
+
+.facts .container{
+    display: flex;
+}
+

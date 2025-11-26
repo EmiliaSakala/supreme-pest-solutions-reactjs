@@ -48,11 +48,11 @@ const Navbar = () => {
 
         {/* Social Icons */}
         <div className="nav-socials">
-          <FaFacebookF />
-          <FaTwitter />
-          <FaLinkedinIn />
-          <FaInstagram />
-          <FaEnvelope />
+          <a href="https://www.facebook.com/supremepest/"><span><FaFacebookF /></span></a>
+          <a href="https://x.com/?lang=en"><span><FaTwitter /></span></a>
+          <a href="https://www.linkedin.com/login"><span><FaLinkedinIn /></span></a>
+          <a href="https://www.instagram.com/supremepest/"><span><FaInstagram /></span></a>
+          <a href="https://mail.google.com/mail/?view=cm&fs=1&to=supremepest25@gmail.com" target="_blank"><span><FaEnvelope /></span></a>
         </div>
 
         {/* Mobile Menu Button */}

@@ -1,0 +1,113 @@
+.vm-section {
+  padding: 80px 40px;
+  background: #ffffff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.vm-container {
+  max-width: 1300px;
+  margin: auto;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 40px;
+}
+
+/* LEFT SIDE */
+.vm-left {
+  flex: 1;
+}
+
+.vm-title {
+  font-size: 35px;
+  font-weight: 700;
+  color: #0a1a3a;
+  margin-bottom: 8px;
+}
+
+.vm-subtitle {
+  font-size: 17px;
+  color: #6e6e6e;
+}
+
+/* ITEM STYLING */
+.vm-item {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.vm-icon {
+  background: #ff7f00;
+  color: white;
+  /* padding: 16px; */
+  border-radius: 50%;
+  font-size: 17px;
+  min-width: 55px;
+  height: 55px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.vm-item h3 {
+  font-size: 22px;
+  font-weight: 700;
+  margin-bottom: 8px;
+  color: #0a1a3a;
+}
+
+.vm-item p {
+  font-size: 16px;
+  color: #555;
+  max-width: 600px;
+}
+
+/* RIGHT SIDE IMAGE */
+.vm-right {
+  flex: 1;
+}
+
+.vm-image {
+  width: 100%;
+  border-radius: 12px;
+  height: 500px;
+  padding-top: 110px;
+  
+}
+
+/* ---------------------------- RESPONSIVE ---------------------------- */
+
+@media (max-width: 992px) {
+  .vm-container {
+    flex-direction: column;
+  }
+
+  .vm-image {
+    height: 380px;
+  }
+}
+
+@media (max-width: 600px) {
+  .vm-section {
+    padding: 50px 20px;
+  }
+
+  .vm-title {
+    font-size: 32px;
+  }
+
+  .vm-item {
+    flex-direction: column;
+  }
+
+  .vm-icon {
+    margin-bottom: -10px;
+  }
+
+  .vm-image {
+    height: 260px;
+  }
+}

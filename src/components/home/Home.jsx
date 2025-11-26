@@ -56,7 +56,7 @@ export default function Hero() {
         >
           <div className="overlay"></div>
 
-          <div className="hero-content fade-in">
+          <div className="hero-content">
             <h1>{slide.title}</h1>
             <p>{slide.text}</p>
             <button className="hero-btn" onClick={scrollToServices}>
