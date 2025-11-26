@@ -5,32 +5,32 @@ import { FaTools, FaBug, FaFan } from "react-icons/fa";
 const data = [
   {
     title: "Rats Control",
-    img: "/images/rats.jpg",
+    img: "/services1.jfif",
     icon: <FaTools />
   },
   {
     title: "Cockroaches",
-    img: "/images/cockroaches.jpg",
+    img: "/services2.jfif",
     icon: <FaBug />
   },
   {
     title: "Residential Pest Control",
-    img: "/images/residential-pest.jpg",
+    img: "/services3.jfif",
     icon: <FaFan />
   },
   {
     title: "Office Fumigation",
-    img: "/images/office.jpg",
+    img: "/banner1.jpg",
     icon: <FaTools />
   },
   {
     title: "Termites Control",
-    img: "/images/termites.jpg",
+    img: "/banner2.jfif",
     icon: <FaBug />
   },
   {
     title: "Commercial Pest Control",
-    img: "/images/commercial.jpg",
+    img: "/services6.jfif",
     icon: <FaFan />
   }
 ];
