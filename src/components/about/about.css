@@ -1,5 +1,5 @@
 .about-section {
-  padding: 80px 40px;
+  padding: 60px 40px;
   background: #ffffff;
 }
 
@@ -17,7 +17,7 @@
 }
 
 .about-title {
-  font-size: 40px;
+  font-size: 35px;
   font-weight: 700;
   color: #1b1b1b;
   margin-bottom: 20px;
@@ -37,7 +37,7 @@
 
 .icon {
   font-size: 30px;
-  color: #ff9900;
+  color: #b31a1a;
   margin-bottom: 8px;
 }
 
@@ -71,7 +71,7 @@
 }
 
 .contact-icon {
-  background: #ff9900;
+  background: #b31a1a;
   color: white;
   padding: 12px;
   border-radius: 50%;

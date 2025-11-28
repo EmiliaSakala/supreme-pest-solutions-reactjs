@@ -52,7 +52,7 @@
 }
 
 .hero-btn {
-  background: #ff7400;
+  background: #b31a1a;
   color: white;
   border: none;
   padding: 14px 28px;
@@ -63,7 +63,7 @@
 }
 
 .hero-btn:hover {
-  background: #cc5d00;
+  background: #000;
 }
 
 /* Arrows */
@@ -71,18 +71,12 @@
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  background: #d20000;
   color: white;
-  padding: 12px;
   border-radius: 50%;
   cursor: pointer;
-  font-size: 22px;
+  font-size: 52px;
   z-index: 10;
   transition: 0.3s;
-}
-
-.arrow:hover {
-  background: #a80000;
 }
 
 .left { left: 20px; }

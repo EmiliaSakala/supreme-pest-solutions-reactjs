@@ -7,7 +7,7 @@ import About from "./components/about/About.jsx";
 import Values from "./components/values/values.jsx";
 import Services from "./components/services/Services.jsx";
 import Testimonials from "./components/testimonials/testimonials.jsx";
-
+import Footer from "./components/footer/footer.jsx";  
 
 
 function App() {
@@ -19,6 +19,7 @@ function App() {
       <Values />
       <Services />
       <Testimonials />
+      <Footer />  
     </div>
   );
 }

@@ -1,5 +1,5 @@
 .vm-section {
-  padding: 80px 40px;
+  padding: 10px 40px;
   background: #ffffff;
   display: flex;
   justify-content: center;
@@ -40,7 +40,7 @@
 }
 
 .vm-icon {
-  background: #ff7f00;
+  background: #b31a1a;
   color: white;
   /* padding: 16px; */
   border-radius: 50%;
