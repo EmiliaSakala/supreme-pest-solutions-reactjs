@@ -44,6 +44,7 @@ const Footer = () => {
                      <a href="https://x.com/?lang=en"><span><FaTwitter /></span></a>
                      <a href="https://www.linkedin.com/login"><span><FaLinkedinIn /></span></a>
                      <a href="https://www.instagram.com/supremepest/"><span><FaInstagram /></span></a>
+                      <a href="mailto:supremepest25@gmail.com"><span><FaEnvelope /></span></a>
           </div>
         </div>
 

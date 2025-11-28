@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import {
   FaFacebookF,
   FaTwitter,
@@ -6,97 +6,153 @@ import {
   FaInstagram,
   FaEnvelope,
   FaPhoneAlt,
+  FaBars,
+  FaTimes,
 } from "react-icons/fa";
 import "./navbar.css";
 
 const Navbar = () => {
   const [open, setOpen] = useState(false);
-  const [hideNav, setHideNav] = useState(false);
-  const [lastScroll, setLastScroll] = useState(0);
+  const menuRef = useRef(null);
+  const burgerRef = useRef(null);
 
-  // Scroll Hide Logic
+  // close on outside click
   useEffect(() => {
-    const handleScroll = () => {
-      const currentScroll = window.scrollY;
-
-      // hide when scrolling down past 120px
-      if (currentScroll > lastScroll && currentScroll > 120) {
-        setHideNav(true);
-      } else {
-        setHideNav(false);
+    const onClick = (e) => {
+      if (!open) return;
+      if (
+        menuRef.current &&
+        !menuRef.current.contains(e.target) &&
+        burgerRef.current &&
+        !burgerRef.current.contains(e.target)
+      ) {
+        setOpen(false);
       }
-
-      setLastScroll(currentScroll);
     };
+    document.addEventListener("mousedown", onClick);
+    return () => document.removeEventListener("mousedown", onClick);
+  }, [open]);
 
-    window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, [lastScroll]);
+  // close on ESC
+  useEffect(() => {
+    const onKey = (e) => {
+      if (e.key === "Escape") setOpen(false);
+    };
+    document.addEventListener("keydown", onKey);
+    return () => document.removeEventListener("keydown", onKey);
+  }, []);
+
+  // lock body scroll while menu is open
+  useEffect(() => {
+    if (open) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "";
+    }
+    return () => {
+      document.body.style.overflow = "";
+    };
+  }, [open]);
+
+  // close mobile menu when resizing to desktop
+  useEffect(() => {
+    const onResize = () => {
+      if (window.innerWidth > 768 && open) setOpen(false);
+    };
+    window.addEventListener("resize", onResize);
+    return () => window.removeEventListener("resize", onResize);
+  }, [open]);
 
   return (
     <>
       {/* Top Contact Bar */}
-      <div className={`topbar ${hideNav ? "hide-elements" : ""}`}>
-        <div className="left">
-          <div className="itemContainer">
-            <a href="#">
-              <span>
-                <FaPhoneAlt /> +263 781 981 247 | +263 775 089 200
-              </span>
-            </a>
+      <div className="topbar">
+        <div className="topbar-inner">
+          <div className="top-left">
+            <span className="top-item"><FaPhoneAlt /> +263 781 981 247 | +263 775 089 200</span>
+            <span className="top-item"><FaEnvelope /> supremepest25@gmail.com</span>
           </div>
-          <div className="itemContainer">
-            <a href="#" target="_blank">
-              <span>
-                <FaEnvelope /> supremepest25@gmail.com
-              </span>
-            </a>
-          </div>
+         
         </div>
       </div>
 
-      {/* Main Navigation */}
-      <nav className={`navbar ${hideNav ? "nav-hidden" : ""}`}>
-        <div className="nav-logo">
-          <img src="./logo resized.jpg" alt="Supreme Pest Solutions" />
-        </div>
+      {/* Main Navbar */}
+      <header className="nav-wrap">
+        <nav className="navbar">
+          <div className="logo">
+            <a href="/"><img src="./logo resized.jpg" alt="Supreme Pest Solutions" /></a>
+          </div>
 
-        {/* Nav Links */}
-        <ul className={`${open ? "nav-links active" : "nav-links"} ${hideNav ? "hide-elements" : ""}`}>
-          <li><a href="/">Home</a></li>
-          <li><a href="/about">About Us</a></li>
-          <li><a href="/services">Our Services</a></li>
-          <li className="dropdown">
-            <a href="#">Explore</a>
-            <ul className="dropdown-menu">
-              <li><a href="/faqs">FAQs</a></li>
-              <li><a href="/pricing">Pricing</a></li>
-            </ul>
-          </li>
-          <li><a href="/contact">Contact Us</a></li>
-        </ul>
+          {/* Desktop Links */}
+          <ul className="nav-links">
+            <li><a href="/">Home</a></li>
+            <li><a href="/about">About Us</a></li>
+            <li><a href="/services">Our Services</a></li>
+            <li className="dropdown">
+              <button className="drop-btn" aria-haspopup="true" aria-expanded="false">Explore ▾</button>
+              <ul className="dropdown-menu">
+                <li><a href="/faqs">FAQs</a></li>
+                <li><a href="/pricing">Pricing</a></li>
+              </ul>
+            </li>
+            <li><a href="/contact">Contact Us</a></li>
+          </ul>
 
-        {/* Social Icons */}
-        <div className={`nav-socials ${hideNav ? "hide-elements" : ""}`}>
-          <a href="https://www.facebook.com/supremepest/"><span><FaFacebookF /></span></a>
-          <a href="https://x.com/?lang=en"><span><FaTwitter /></span></a>
-          <a href="https://www.linkedin.com/login"><span><FaLinkedinIn /></span></a>
-          <a href="https://www.instagram.com/supremepest/"><span><FaInstagram /></span></a>
-          <a href="mailto:supremepest25@gmail.com"><span><FaEnvelope /></span></a>
-        </div>
+          {/* Desktop Socials */}
+          <div className="nav-socials desktop-only">
+            <a href="mailto:supremepest25@gmail.com"><FaEnvelope /></a>
+            <a href="https://www.facebook.com/supremepest/" aria-label="Facebook"><FaFacebookF /></a>
+            <a href="https://x.com/?lang=en" aria-label="Twitter"><FaTwitter /></a>
+            <a href="https://www.linkedin.com/login" aria-label="LinkedIn"><FaLinkedinIn /></a>
+            <a href="https://www.instagram.com/supremepest/" aria-label="Instagram"><FaInstagram /></a>
+          </div>
 
-        {/* Mobile Menu Button */}
+          {/* Hamburger */}
+          <button
+            className="hamburger"
+            aria-label={open ? "Close menu" : "Open menu"}
+            aria-expanded={open}
+            onClick={() => setOpen((s) => !s)}
+            ref={burgerRef}
+          >
+            {open ? <FaTimes /> : <FaBars />}
+          </button>
+        </nav>
+
+        {/* Mobile Menu (slides down) */}
         <div
-  className="hamburger"
-  onClick={() => {
-    // ensure navbar is visible when opening the mobile menu
-    setHideNav(false);
-    setOpen(prev => !prev);
-  }}
->
-  <span></span><span></span><span></span>
-</div>
-      </nav>
+          className={`mobile-menu ${open ? "open" : ""}`}
+          ref={menuRef}
+          role="dialog"
+          aria-modal="true"
+        >
+          <div className="mobile-inner">
+            <ul className="mobile-links">
+              <li><a onClick={() => setOpen(false)} href="/">Home</a></li>
+              <li><a onClick={() => setOpen(false)} href="/about">About Us</a></li>
+              <li><a onClick={() => setOpen(false)} href="/services">Our Services</a></li>
+              <li className="mobile-dropdown">
+                <details>
+                  <summary>Explore</summary>
+                  <ul>
+                    <li><a onClick={() => setOpen(false)} href="/faqs">FAQs</a></li>
+                    <li><a onClick={() => setOpen(false)} href="/pricing">Pricing</a></li>
+                  </ul>
+                </details>
+              </li>
+              <li><a onClick={() => setOpen(false)} href="/contact">Contact Us</a></li>
+            </ul>
+
+            <div className="mobile-socials">
+              <a href="https://www.facebook.com/supremepest/" aria-label="Facebook"><FaFacebookF /></a>
+              <a href="https://x.com/?lang=en" aria-label="Twitter"><FaTwitter /></a>
+              <a href="https://www.linkedin.com/login" aria-label="LinkedIn"><FaLinkedinIn /></a>
+              <a href="https://www.instagram.com/supremepest/" aria-label="Instagram"><FaInstagram /></a>
+              <a href="mailto:supremepest25@gmail.com" aria-label="Email"><FaEnvelope /></a>
+            </div>
+          </div>
+        </div>
+      </header>
     </>
   );
 };
