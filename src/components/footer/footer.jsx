@@ -1,5 +1,5 @@
 import "./footer.css";
-import { FaMapMarkerAlt, FaPhoneAlt, FaEnvelope, FaTwitter, FaFacebookF, FaYoutube, FaLinkedinIn } from "react-icons/fa";
+import { FaMapMarkerAlt, FaPhoneAlt, FaEnvelope, FaTwitter, FaFacebookF, FaLinkedinIn, FaInstagram } from "react-icons/fa";
 
 const Footer = () => {
   return (
@@ -40,10 +40,10 @@ const Footer = () => {
         <div className="footer-col">
           <h3>Follow Us</h3>
           <div className="footer-social">
-            <a href="#"><FaTwitter /></a>
-            <a href="#"><FaFacebookF /></a>
-            <a href="#"><FaYoutube /></a>
-            <a href="#"><FaLinkedinIn /></a>
+                     <a href="https://www.facebook.com/supremepest/"><span><FaFacebookF /></span></a>
+                     <a href="https://x.com/?lang=en"><span><FaTwitter /></span></a>
+                     <a href="https://www.linkedin.com/login"><span><FaLinkedinIn /></span></a>
+                     <a href="https://www.instagram.com/supremepest/"><span><FaInstagram /></span></a>
           </div>
         </div>
 
@@ -51,7 +51,7 @@ const Footer = () => {
 
       {/* --- COPYRIGHT BAR --- */}
       <div className="footer-bottom">
-        © <span className="brand">Royal Priesthood</span>, All Rights Reserved.
+        © 2025 <a href="https://portfolio-of-df1b.vercel.app/"><span className="brand">Royal Priesthood</span></a>, All Rights Reserved.
       </div>
     </footer>
   );
