@@ -4,7 +4,7 @@ html, body { margin: 0; padding: 0; width: 100%; }
 
 /* ---------- Topbar ---------- */
 .topbar {
-  background: #001f54;
+  background: #000;
   color: white;
   height: 40px;
   display: flex;
