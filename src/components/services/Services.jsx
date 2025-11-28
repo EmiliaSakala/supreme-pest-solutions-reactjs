@@ -26,7 +26,7 @@ const data = [
   {
     title: "Termites Control",
     img: "/banner2.jfif",
-    icon: <FaBug />
+    icon: <FaBug /> 
   },
   {
     title: "Commercial Pest Control",
@@ -34,6 +34,8 @@ const data = [
     icon: <FaFan />
   }
 ];
+
+
 
 const Services = () => {
   return (

@@ -6,6 +6,7 @@ import About from "./components/about/About.jsx";
 // import Stats from "./components/stats/stats.jsx";
 import Values from "./components/values/values.jsx";
 import Services from "./components/services/Services.jsx";
+import Testimonials from "./components/testimonials/testimonials.jsx";
 
 
 
@@ -17,6 +18,7 @@ function App() {
       <About />
       <Values />
       <Services />
+      <Testimonials />
     </div>
   );
 }
