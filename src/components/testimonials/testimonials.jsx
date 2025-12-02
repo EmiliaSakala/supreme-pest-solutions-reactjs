@@ -23,7 +23,7 @@ const testimonials = [
     name: "Tendai",
     role: "Home Owner",
     text:
-      "We had a terrible problem with cockroaches in our kitchen. After just one visit, the team sorted it completely. It's been three months now and still no sign of them. I really appreciate the follow-up check-ins as well",
+      "We had a terrible problem with cockroaches in our kitchen. After just one visit, the team sorted it completely. It's been three months now and still no sign of them. I really appreciate the follow-up check-ins as well.",
     mainImg: "/test1.jfif",
   },
 ];

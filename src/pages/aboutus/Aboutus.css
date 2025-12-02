@@ -1,0 +1,215 @@
+.about-banner {
+  position: relative;
+  background: url("/banner1.jpg") center/cover no-repeat;
+  height: 300px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: white;
+}
+
+.banner-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.5);
+}
+
+.about-banner h1, .about-banner p {
+  position: relative;
+  z-index: 2;
+}
+
+.about-banner h1 {
+  font-size: 48px;
+  font-weight: 700;
+}
+
+.about-banner p {
+  margin-top: 10px;
+}
+
+.about-banner p span{
+    color:red;
+}
+
+/* Mission Vision Values */
+.mvv-section {
+  padding: 60px 8%;
+  text-align: center;
+}
+
+.mvv-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit,minmax(250px,1fr));
+  gap: 25px;
+  margin-top: 30px;
+}
+
+.mvv-card {
+  background: #fff;
+  padding: 25px;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  transition: 0.3s;
+}
+
+.mvv-card h3{ 
+    color: #0a1a3a;
+}
+
+.mvv-card p{
+    color: #000;
+}
+
+.mvv-card:hover {
+  transform: translateY(-5px);
+}
+
+/* Why Choose Us */
+.why-section {
+  padding: 60px 8%;
+  background: #fafafa;
+  text-align: center;
+}
+
+.why-section h2{
+    color: #0a1a3a;
+}
+
+.why-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit,minmax(220px,1fr));
+  gap: 30px;
+  margin-top: 40px;
+}
+
+.why-card {
+  background: white;
+  padding: 30px;
+  border-radius: 8px;
+  text-align: center;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.why-card h4{
+    color: #0a1a3a;
+}
+
+.why-card p{
+    color: #000;
+}
+
+.why-card svg {
+  font-size: 40px;
+  color: #ff4d4d;
+  margin-bottom: 10px;
+}
+
+/* Timeline */
+.timeline-section {
+  padding: 60px 8%;
+  text-align: center;
+}
+
+.timeline {
+  margin-top: 40px;
+  border-left: 3px solid #ff4d4d;
+  padding-left: 25px;
+}
+
+.timeline-item {
+  margin-bottom: 35px;
+}
+
+.timeline-item span {
+  font-weight: bold;
+  color: #ff4d4d;
+}
+
+/* Team */
+.team-section {
+  padding: 60px 8%;
+  background: #fafafa;
+  text-align: center;
+}
+
+.team-section h2{
+    color: #0a1a3a;
+}
+
+.team-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit,minmax(200px,1fr));
+  gap: 30px;
+  margin-top: 30px;
+}
+
+.team-card {
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.team-card img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  border-radius: 6px;
+}
+
+.team-card h4{
+    color: #000;
+}
+
+.team-card p{
+    color: #000;
+}
+
+/* Testimonials Slider */
+.testimonials-section {
+  padding: 60px 8%;
+  text-align: center;
+}
+
+.testimonial-slider {
+  margin-top: 35px;
+  display: flex;
+  gap: 20px;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+}
+
+.testimonial-card {
+  min-width: 300px;
+  background: white;
+  padding: 25px;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.testimonial-card h4{
+    color: #000;
+}
+
+.testimonial-card p{
+    color: #000;
+}
+
+.quote-icon {
+  font-size: 25px;
+  color: #ff4d4d;
+  margin-bottom: 10px;
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .about-banner h1 {
+    font-size: 36px;
+  }
+
+  .team-card img {
+    height: 180px;
+  }
+}
