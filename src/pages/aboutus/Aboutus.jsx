@@ -137,36 +137,7 @@ const Aboutpage = () => {
         </div>
       </section>
 
-      {/* ---------------- Testimonials Slider ---------------- */}
-      <section className="testimonials-section">
-        <h2>What Our Clients Say</h2>
-
-        <div className="testimonial-slider">
-          <div className="testimonial-card">
-            <FaQuoteLeft className="quote-icon" />
-            <p>
-              “Professional, fast, and reliable! Supreme Pest Solutions solved our cockroach problem in one visit.”
-            </p>
-            <h4>— Tendai M.</h4>
-          </div>
-
-          <div className="testimonial-card">
-            <FaQuoteLeft className="quote-icon" />
-            <p>
-              “Excellent service. Friendly team and effective treatments. Highly recommended!”
-            </p>
-            <h4>— Tasha K.</h4>
-          </div>
-
-          <div className="testimonial-card">
-            <FaQuoteLeft className="quote-icon" />
-            <p>
-              “Affordable and professional. They explained everything clearly and delivered great results.”
-            </p>
-            <h4>— Brian P.</h4>
-          </div>
-        </div>
-      </section>
+      
 
     </div>
   );
