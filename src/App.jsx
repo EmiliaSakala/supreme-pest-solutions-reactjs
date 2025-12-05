@@ -10,7 +10,11 @@ import Values from "./components/values/values.jsx";
 import Services from "./components/services/Services.jsx";
 import Testimonials from "./components/testimonials/testimonials.jsx";
 
+
+// ---------------------------------PAGES----------------///////////////////////////////////////////////////////////////////////-----------------
 import Aboutpage from "./pages/aboutus/Aboutus.jsx";
+import Servicespage from "./pages/services/services.jsx"; 
+import Contactpage from "./pages/contact/contact.jsx";
 
 function App() {
   return (
@@ -32,6 +36,8 @@ function App() {
         />
 
         <Route path="/about" element={<Aboutpage />} />
+        <Route path="/services" element={<Servicespage />} />
+        <Route path="/contact" element={<Contactpage />} />
       </Routes>
 
       <Footer />

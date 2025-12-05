@@ -88,13 +88,6 @@ const Navbar = () => {
             <li><a href="/">Home</a></li>
             <li><a href="/about">About Us</a></li>
             <li><a href="/services">Our Services</a></li>
-            <li className="dropdown">
-              <button className="drop-btn" aria-haspopup="true" aria-expanded="false">Explore ▾</button>
-              <ul className="dropdown-menu">
-                <li><a href="/faqs">FAQs</a></li>
-                <li><a href="/pricing">Pricing</a></li>
-              </ul>
-            </li>
             <li><a href="/contact">Contact Us</a></li>
           </ul>
 
