@@ -124,15 +124,6 @@ const Navbar = () => {
               <li><a onClick={() => setOpen(false)} href="/">Home</a></li>
               <li><a onClick={() => setOpen(false)} href="/about">About Us</a></li>
               <li><a onClick={() => setOpen(false)} href="/services">Our Services</a></li>
-              <li className="mobile-dropdown">
-                <details>
-                  <summary>Explore</summary>
-                  <ul>
-                    <li><a onClick={() => setOpen(false)} href="/faqs">FAQs</a></li>
-                    <li><a onClick={() => setOpen(false)} href="/pricing">Pricing</a></li>
-                  </ul>
-                </details>
-              </li>
               <li><a onClick={() => setOpen(false)} href="/contact">Contact Us</a></li>
             </ul>
 
